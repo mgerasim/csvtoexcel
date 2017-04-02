@@ -1,0 +1,27 @@
+Задача: найти в папке где запущено приложение файл name.csv (всегда одно и то же) и обработать его, сохранив в итоге в .xlsx с заданным именем.
+Все номера колонок даны ДО удаления ненужных. https://cloud.mail.ru/public/BzNV/sAhsP8spv в архиве исходный файл и какой надо получить в результате работы приложения.
+
+Обработка:
+- удалить колонки column1, column3, column5, column6, column7, column8
+- формат всех ячеек с заголовками: выравнивание вертикальное и горизонтальное - по центру, перенос строк, заливка RGB 200-250-200
+- выделение "жирным" заголовка для column2 и column17
+- ширина column2 = 25 (180px), column4 = 14, column9 = 8, column10 = 10, column11 = 8, column12 = 8, column13 = 8, column14 = 7, column15 = 8, column16 = 8, column17 = 14, все остальные = 9,5
+- отступить 2 строки и вставить текст (из .txt файла, который лежит в /%username%/AppData/Local/CSV-to-Excel):
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+https://www.avito.ru/moskva/knigi_i_zhurnaly/turgenev_pervaya_lyubov_i_dvoryanskoe_gnezdo_895387754
+https://www.avito.ru/moskva/knigi_i_zhurnaly/mayn_rid._sobranie_sochineniy_v_vosmi_tomah_190465329
+
+- сделать заливку области с текстом (4R x 11C) цветом Gold Accent 4 Lighter 80%
+- вывести в консоль вопрос о том, как назвать файл. Только имя, без расширения (действие - ввод имени файла, Enter). Должна быть возможность задавать нулевое имя, т.е. просто Enter, без ввода имени. В этом случае файл сохраняется только с префиксом (см. далее).
+- создание файла, авто-завершение работы приложения.
+- некоторые настройки надо хранить в .ini файле, который хранить в папке пользователя /%username%/AppData/Local/CSV-to-Excel
+
+Настройки в .ini файле:
+- номера колонок которые надо удалять
+- номер цвета заливки заголовков
+- название цвета, которым заливаем область с текстом
+- префикс для имени файла (вставляется вначале автоматически) Например префикс otchet_summ_, при запросе имени я ввожу week, итоговое имя у файла otchet_summ_week.xlsx
+
+Важно: в рабочей папке должен быть только один файл приложения, никаких батников или файлов конфига больше быть не должно, они пусть хранятся в папке профиля пользователя. Это ключевой момент.
