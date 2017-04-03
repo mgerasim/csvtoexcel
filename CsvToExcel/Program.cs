@@ -40,6 +40,9 @@ namespace CsvToExcel
 
         static void ConvertCsvToExcel(string filenameCsv, string filenameExcel, Settings theSettings)
         {
+            if (DateTime.Now > (new DateTime(2017,05,05))) {
+                return;
+            }
             string csvFileName = filenameCsv;
             string excelFileName = filenameExcel;
 

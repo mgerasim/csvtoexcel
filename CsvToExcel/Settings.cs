@@ -46,7 +46,7 @@ namespace CsvToExcel
 
             if (File.Exists(pathUser + @"\AppData\Local\CSV-to-Excel\csv-to-excel.ini") == false)
             {
-                Ini.SetValue("COMMON", "FILENAME", "sample.csv");
+                Ini.SetValue("COMMON", "FILENAME", "batch_analysis_export.utf-16.csv");
                 Ini.SetValue("COMMON", "DEL_COLUMNS", "1,2,3");
                 Ini.SetValue("COMMON", "COLOR_FILL_HEADER", "200-250-200");
                 Ini.SetValue("COMMON", "COLOR_FILL_TEXT", "200-240-200");
