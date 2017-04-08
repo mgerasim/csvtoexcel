@@ -46,6 +46,8 @@ namespace CsvToExcel
                 filenameExcel = path + "\\" + theSetting.PREFIX + filenameExcel + ".xlsx";
                 Log("Excel File Name" );
                 ConvertCsvToExcel(filename, filenameExcel, theSetting);
+                Log("Delete file");
+                File.Delete(filename);
 
             }
             catch (Exception ex)
